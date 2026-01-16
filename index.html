@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    color: #111;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #111;
+}
+
+.hero {
+    padding: 100px 0;
+    background: #f5f5f5;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section.gray {
+    background: #f9f9f9;
+}
+
+h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.grid-2, .grid-3, .grid-4 {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #eee;
+}
+
+.btn {
+    padding: 10px 18px;
+    border: 1px solid #111;
+    text-decoration: none;
+    color: #111;
+}
+
+.btn.primary {
+    background: #111;
+    color: #fff;
+}
+
+.hero-buttons .btn {
+    margin-right: 10px;
+}
+
+.process li {
+    margin-bottom: 10px;
+}
+
+.form {
+    display: grid;
+    gap: 15px;
+    max-width: 500px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.footer {
+    padding: 40px 0;
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
