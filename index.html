@@ -1,118 +1,135 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mail Courier — Логистика для селлеров</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-body {
-    color: #111;
-    line-height: 1.6;
-}
+<header class="header">
+    <div class="container header-inner">
+        <div class="logo">Mail Courier</div>
+        <nav class="nav">
+            <a href="#services">Услуги</a>
+            <a href="#process">Как мы работаем</a>
+            <a href="#cases">Кейсы</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contacts" class="btn">Получить расчёт</a>
+        </nav>
+    </div>
+</header>
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
+<section class="hero">
+    <div class="container">
+        <h1>Легальная доставка товаров из Китая для селлеров маркетплейсов</h1>
+        <p>
+            Проверяем поставщика, оплачиваем товар, принимаем на складе, проводим инспекцию,
+            маркируем «Честным знаком», растамаживаем и доставляем на склады маркетплейсов.
+        </p>
+        <div class="hero-buttons">
+            <a href="#contacts" class="btn primary">Получить расчёт</a>
+            <a href="#contacts" class="btn secondary">Написать в WhatsApp</a>
+        </div>
+    </div>
+</section>
 
-.header {
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
-}
+<section class="section">
+    <div class="container">
+        <h2>Для кого мы работаем</h2>
+        <div class="grid-3">
+            <div class="card">Селлеры Wildberries</div>
+            <div class="card">Селлеры Ozon и Яндекс Маркет</div>
+            <div class="card">Бренды с производством в Китае</div>
+            <div class="card">Оптовики, выходящие на маркетплейсы</div>
+            <div class="card">Amazon / eBay продавцы</div>
+        </div>
+    </div>
+</section>
 
-.header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
+<section class="section gray" id="services">
+    <div class="container">
+        <h2>Полный цикл услуг</h2>
+        <div class="grid-4">
+            <div class="card">Проверка поставщиков</div>
+            <div class="card">Оплата товара поставщику</div>
+            <div class="card">Приём товара на склад в Китае</div>
+            <div class="card">Инспекция и фото-отчёт</div>
+            <div class="card">Маркировка и переупаковка</div>
+            <div class="card">Консолидация партий</div>
+            <div class="card">Хранение на складах</div>
+            <div class="card">Авиа / ЖД / Море / Авто</div>
+            <div class="card">Таможня и НДС</div>
+            <div class="card">Честный знак</div>
+            <div class="card">Фулфилмент</div>
+            <div class="card">Доставка по адресам</div>
+        </div>
+    </div>
+</section>
 
-.logo {
-    font-weight: bold;
-    font-size: 20px;
-}
+<section class="section" id="process">
+    <div class="container">
+        <h2>Как мы работаем</h2>
+        <ol class="process">
+            <li>Вы отправляете запрос и описание товара</li>
+            <li>Мы проверяем поставщика</li>
+            <li>Рассчитываем стоимость</li>
+            <li>Вы оплачиваете нам</li>
+            <li>Мы оплачиваем фабрике</li>
+            <li>Принимаем товар на складе</li>
+            <li>Инспекция и маркировка</li>
+            <li>Таможня, пошлины и НДС</li>
+            <li>Доставка на маркетплейс</li>
+        </ol>
+    </div>
+</section>
 
-.nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #111;
-}
+<section class="section gray" id="cases">
+    <div class="container">
+        <h2>Кейсы</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Селлер WB — аксессуары</h3>
+                <p>Переход с карго на легальную модель. Экономия 14%, ускорение поставок.</p>
+            </div>
+            <div class="card">
+                <h3>Бренд одежды</h3>
+                <p>Маркировка «Честный знак» под FBO. 15 000 единиц в месяц.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-.hero {
-    padding: 100px 0;
-    background: #f5f5f5;
-}
+<section class="section" id="faq">
+    <div class="container">
+        <h2>FAQ</h2>
+        <div class="faq">
+            <p><strong>Это не карго?</strong><br>Нет. Все пошлины и НДС уплачиваются официально.</p>
+            <p><strong>Можно взять только часть услуг?</strong><br>Да. От инспекции до полной логистики.</p>
+            <p><strong>Какие документы я получаю?</strong><br>Инвойсы, декларации, подтверждение уплаты налогов.</p>
+        </div>
+    </div>
+</section>
 
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
-}
+<section class="section gray" id="contacts">
+    <div class="container">
+        <h2>Свяжитесь с нами</h2>
+        <form class="form">
+            <input type="text" placeholder="Имя" />
+            <input type="text" placeholder="Телефон / WhatsApp" />
+            <input type="text" placeholder="Ссылка на товар" />
+            <textarea placeholder="Комментарий"></textarea>
+            <button class="btn primary" type="submit">Отправить заявку</button>
+        </form>
+    </div>
+</section>
 
-.section {
-    padding: 80px 0;
-}
+<footer class="footer">
+    <div class="container">
+        <p>© Mail Courier. Все права защищены.</p>
+    </div>
+</footer>
 
-.section.gray {
-    background: #f9f9f9;
-}
-
-h2 {
-    margin-bottom: 40px;
-    font-size: 32px;
-}
-
-.grid-2, .grid-3, .grid-4 {
-    display: grid;
-    gap: 20px;
-}
-
-.grid-2 { grid-template-columns: repeat(2, 1fr); }
-.grid-3 { grid-template-columns: repeat(3, 1fr); }
-.grid-4 { grid-template-columns: repeat(4, 1fr); }
-
-.card {
-    background: #fff;
-    padding: 20px;
-    border: 1px solid #eee;
-}
-
-.btn {
-    padding: 10px 18px;
-    border: 1px solid #111;
-    text-decoration: none;
-    color: #111;
-}
-
-.btn.primary {
-    background: #111;
-    color: #fff;
-}
-
-.hero-buttons .btn {
-    margin-right: 10px;
-}
-
-.process li {
-    margin-bottom: 10px;
-}
-
-.form {
-    display: grid;
-    gap: 15px;
-    max-width: 500px;
-}
-
-input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-.footer {
-    padding: 40px 0;
-    background: #111;
-    color: #fff;
-    text-align: center;
-}
+</body>
+</html>
