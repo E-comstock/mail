@@ -1,135 +1,535 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Mail Courier — Логистика для селлеров</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mail Courier — логистика и ВЭД для селлеров</title>
+  <meta name="description" content="Mail Courier: проверка поставщиков, оплата, инспекция, консолидация, доставка, таможня, Честный знак, склад и отгрузка на маркетплейсы." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-
-<header class="header">
-    <div class="container header-inner">
-        <div class="logo">Mail Courier</div>
-        <nav class="nav">
-            <a href="#services">Услуги</a>
-            <a href="#process">Как мы работаем</a>
-            <a href="#cases">Кейсы</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contacts" class="btn">Получить расчёт</a>
-        </nav>
+  <!-- Top notice -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="pill">Без карго</span>
+        <span class="pill pill--ghost">Оплата • Склад • Таможня • Маркировка</span>
+      </div>
+      <div class="topbar__right">
+        <a class="topbar__link" href="tel:+78126704040">+7 (812) 670-40-40</a>
+        <span class="dot">•</span>
+        <a class="topbar__link" href="#lead">Оставить заявку</a>
+      </div>
     </div>
-</header>
+  </div>
 
-<section class="hero">
-    <div class="container">
-        <h1>Легальная доставка товаров из Китая для селлеров маркетплейсов</h1>
-        <p>
-            Проверяем поставщика, оплачиваем товар, принимаем на складе, проводим инспекцию,
-            маркируем «Честным знаком», растамаживаем и доставляем на склады маркетплейсов.
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Mail Courier">
+        <span class="brand__mark"></span>
+        <span class="brand__name">Mail Courier</span>
+      </a>
+
+      <nav class="nav" aria-label="Навигация">
+        <a href="#services">Услуги</a>
+        <a href="#solutions">Решения</a>
+        <a href="#process">Процесс</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn--sm btn--primary" href="#lead">Получить расчёт</a>
+      </nav>
+
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile" data-mobile hidden>
+      <div class="container mobile__inner">
+        <a href="#services">Услуги</a>
+        <a href="#solutions">Решения</a>
+        <a href="#process">Процесс</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn--primary" href="#lead">Получить расчёт</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <h1>Весь импорт для селлеров — с одним партнёром</h1>
+        <p class="lead">
+          Проверка поставщика → оплата → приём на складе → инспекция и подготовка →
+          консолидация → доставка любым транспортом → таможня и НДС → «Честный знак» →
+          склад и отгрузка на маркетплейсы.
         </p>
-        <div class="hero-buttons">
-            <a href="#contacts" class="btn primary">Получить расчёт</a>
-            <a href="#contacts" class="btn secondary">Написать в WhatsApp</a>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#lead">Рассчитать доставку</a>
+          <a class="btn btn--ghost" href="#services">Посмотреть услуги</a>
         </div>
-    </div>
-</section>
 
-<section class="section">
-    <div class="container">
-        <h2>Для кого мы работаем</h2>
-        <div class="grid-3">
-            <div class="card">Селлеры Wildberries</div>
-            <div class="card">Селлеры Ozon и Яндекс Маркет</div>
-            <div class="card">Бренды с производством в Китае</div>
-            <div class="card">Оптовики, выходящие на маркетплейсы</div>
-            <div class="card">Amazon / eBay продавцы</div>
+        <div class="hero__stats" role="list">
+          <div class="stat" role="listitem">
+            <div class="stat__num">6+</div>
+            <div class="stat__label">стран присутствия и партнёров</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__num">24/7</div>
+            <div class="stat__label">поддержка и контроль этапов</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__num">White</div>
+            <div class="stat__label">документы, пошлины и НДС</div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
 
-<section class="section gray" id="services">
-    <div class="container">
-        <h2>Полный цикл услуг</h2>
-        <div class="grid-4">
-            <div class="card">Проверка поставщиков</div>
-            <div class="card">Оплата товара поставщику</div>
-            <div class="card">Приём товара на склад в Китае</div>
-            <div class="card">Инспекция и фото-отчёт</div>
-            <div class="card">Маркировка и переупаковка</div>
-            <div class="card">Консолидация партий</div>
-            <div class="card">Хранение на складах</div>
-            <div class="card">Авиа / ЖД / Море / Авто</div>
-            <div class="card">Таможня и НДС</div>
-            <div class="card">Честный знак</div>
-            <div class="card">Фулфилмент</div>
-            <div class="card">Доставка по адресам</div>
+      <div class="hero__visual">
+        <div class="glass">
+          <div class="glass__title">Что вы получаете</div>
+          <ul class="check">
+            <li>Прозрачная схема без «серых» рисков</li>
+            <li>Фото/видео-отчёт по приёмке и инспекции</li>
+            <li>Консолидация и подготовка под маркетплейсы</li>
+            <li>Таможня, НДС, маркировка — под ключ</li>
+          </ul>
+
+          <div class="route">
+            <div class="route__node">Китай / ЕС / США</div>
+            <div class="route__line"></div>
+            <div class="route__node">Таможня</div>
+            <div class="route__line"></div>
+            <div class="route__node">Склад / MP</div>
+          </div>
         </div>
+        <div class="hero__bg"></div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section class="section" id="process">
+  <!-- Trust / logos placeholder -->
+  <section class="section section--tight">
     <div class="container">
-        <h2>Как мы работаем</h2>
-        <ol class="process">
-            <li>Вы отправляете запрос и описание товара</li>
-            <li>Мы проверяем поставщика</li>
-            <li>Рассчитываем стоимость</li>
-            <li>Вы оплачиваете нам</li>
-            <li>Мы оплачиваем фабрике</li>
-            <li>Принимаем товар на складе</li>
-            <li>Инспекция и маркировка</li>
-            <li>Таможня, пошлины и НДС</li>
-            <li>Доставка на маркетплейс</li>
-        </ol>
+      <div class="strip">
+        <div class="strip__left">
+          <div class="kicker">Работаем для e-commerce и B2B</div>
+          <h2 class="h2">Сервис, который закрывает цепочку целиком</h2>
+        </div>
+        <div class="strip__right">
+          <div class="mini">
+            <div class="mini__t">Подходит для</div>
+            <div class="mini__p">WB / Ozon / Я.Маркет • опт • бренды</div>
+          </div>
+          <div class="mini">
+            <div class="mini__t">Тарифы</div>
+            <div class="mini__p">быстро / стандарт / эконом</div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section class="section gray" id="cases">
+  <!-- Services -->
+  <section class="section" id="services">
     <div class="container">
-        <h2>Кейсы</h2>
-        <div class="grid-2">
-            <div class="card">
-                <h3>Селлер WB — аксессуары</h3>
-                <p>Переход с карго на легальную модель. Экономия 14%, ускорение поставок.</p>
+      <div class="section__head">
+        <div>
+          <div class="kicker">Услуги</div>
+          <h2 class="h2">Собери нужный набор — от одной операции до полного цикла</h2>
+        </div>
+        <a class="link" href="#lead">Нужен расчёт →</a>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card">
+          <h3>Проверка поставщиков</h3>
+          <p>Проверяем компанию/фабрику, риски, документы и базовую надёжность. Снижаем шанс «влететь» на мошенников.</p>
+          <ul class="bullets">
+            <li>оценка рисков</li>
+            <li>проверка данных</li>
+            <li>краткий отчёт</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Оплата поставщику</h3>
+          <p>Вы оплачиваете нам — мы оплачиваем вашему поставщику. Прозрачная схема, подтверждения и контроль оплаты.</p>
+          <ul class="bullets">
+            <li>контроль платежа</li>
+            <li>документальное подтверждение</li>
+            <li>сопровождение сделки</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Приём товара на склад</h3>
+          <p>Принимаем груз, фиксируем состояние упаковки и количество. Отчёт — сразу, без “пропало где-то по пути”.</p>
+          <ul class="bullets">
+            <li>учёт по местам</li>
+            <li>фото фиксация</li>
+            <li>контроль упаковки</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Инспекция и подготовка</h3>
+          <p>Фото/видео, маркировка, стикеровка, переупаковка, комплектование. Под требования вашего канала продаж.</p>
+          <ul class="bullets">
+            <li>проверка партии</li>
+            <li>маркировка / стикеры</li>
+            <li>переупаковка</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Консолидация и хранение</h3>
+          <p>Объединяем поставки от разных фабрик в одну отправку или делим партии по адресам/складам.</p>
+          <ul class="bullets">
+            <li>объединение партий</li>
+            <li>разделение по направлениям</li>
+            <li>хранение на складе</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Доставка любым транспортом</h3>
+          <p>Авиа, авто, ЖД, море. Подбираем маршрут по сроку и бюджету, а не “как получится”.</p>
+          <ul class="bullets">
+            <li>выбор маршрута</li>
+            <li>контроль этапов</li>
+            <li>страхование (опционально)</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Таможня, пошлины и НДС</h3>
+          <p>Оформляем документы, выпускаем груз, рассчитываем и проводим платежи. Нормально, легально, без сюрпризов.</p>
+          <ul class="bullets">
+            <li>декларации</li>
+            <li>пошлины и НДС</li>
+            <li>комплект документов</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>«Честный знак»</h3>
+          <p>Организуем процессы маркировки: подготовка, печать/нанесение, контроль соответствия, отчётность.</p>
+          <ul class="bullets">
+            <li>коды маркировки</li>
+            <li>нанесение</li>
+            <li>контроль качества</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Склад и отгрузка по адресам</h3>
+          <p>Хранение, обработка, отгрузка на склады маркетплейсов или по вашим адресам. Под FBO/FBS-логику.</p>
+          <ul class="bullets">
+            <li>складские услуги</li>
+            <li>подготовка отгрузок</li>
+            <li>доставка по адресам</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions / tabs -->
+  <section class="section section--muted" id="solutions">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <div class="kicker">Решения</div>
+          <h2 class="h2">Под разные модели продаж</h2>
+        </div>
+      </div>
+
+      <div class="tabs" data-tabs>
+        <div class="tabs__bar" role="tablist" aria-label="Решения">
+          <button class="tab is-active" role="tab" aria-selected="true" data-tab="mp">Маркетплейсы</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="b2b">B2B импорт</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="test">Тест-партии</button>
+        </div>
+
+        <div class="tabs__panes">
+          <div class="pane is-active" data-pane="mp" role="tabpanel">
+            <div class="pane__grid">
+              <div>
+                <h3>От фабрики до склада маркетплейса</h3>
+                <p>
+                  Закрываем цепочку: поставщик → оплата → склад → инспекция → подготовка (стикеры/упаковка/комплекты) →
+                  доставка → таможня → «Честный знак» → отгрузка на FBO/FBS.
+                </p>
+                <ul class="check">
+                  <li>подготовка под требования MP</li>
+                  <li>прозрачные этапы и отчёты</li>
+                  <li>уменьшаем возвраты из-за ошибок упаковки/маркировки</li>
+                </ul>
+              </div>
+              <div class="pane__card">
+                <div class="pane__metric">
+                  <div class="pane__num">1</div>
+                  <div class="pane__txt">единый менеджер и контроль этапов</div>
+                </div>
+                <div class="pane__metric">
+                  <div class="pane__num">0</div>
+                  <div class="pane__txt">карго-рисков и “серых” схем</div>
+                </div>
+                <a class="btn btn--primary" href="#lead">Получить расчёт</a>
+              </div>
             </div>
-            <div class="card">
-                <h3>Бренд одежды</h3>
-                <p>Маркировка «Честный знак» под FBO. 15 000 единиц в месяц.</p>
+          </div>
+
+          <div class="pane" data-pane="b2b" role="tabpanel">
+            <div class="pane__grid">
+              <div>
+                <h3>Импорт для компаний</h3>
+                <p>
+                  Если вы импортируете регулярно: поможем с поставщиками, оплатой, логистикой и таможенным оформлением,
+                  выдадим комплект документов для бухгалтерии и банка.
+                </p>
+                <ul class="check">
+                  <li>договорная и документальная чистота</li>
+                  <li>маршруты под срок/бюджет</li>
+                  <li>консолидация нескольких закупок</li>
+                </ul>
+              </div>
+              <div class="pane__card">
+                <div class="pane__metric">
+                  <div class="pane__num">B2B</div>
+                  <div class="pane__txt">поставки с понятной экономикой</div>
+                </div>
+                <div class="pane__metric">
+                  <div class="pane__num">Docs</div>
+                  <div class="pane__txt">полный пакет под учёт</div>
+                </div>
+                <a class="btn btn--primary" href="#lead">Обсудить задачу</a>
+              </div>
             </div>
+          </div>
+
+          <div class="pane" data-pane="test" role="tabpanel">
+            <div class="pane__grid">
+              <div>
+                <h3>Тест-партии и запуск ниши</h3>
+                <p>
+                  Удобно, когда вы тестируете товар: принимаем небольшие объёмы, делаем инспекцию, готовим к продаже,
+                  подбираем быстрый или экономный маршрут.
+                </p>
+                <ul class="check">
+                  <li>инспекция до отправки</li>
+                  <li>минимизация брака и пересорта</li>
+                  <li>быстрый старт продаж</li>
+                </ul>
+              </div>
+              <div class="pane__card">
+                <div class="pane__metric">
+                  <div class="pane__num">Fast</div>
+                  <div class="pane__txt">авиа/экспресс варианты</div>
+                </div>
+                <div class="pane__metric">
+                  <div class="pane__num">Save</div>
+                  <div class="pane__txt">консолидация и оптимизация</div>
+                </div>
+                <a class="btn btn--primary" href="#lead">Запросить вариант</a>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
 
-<section class="section" id="faq">
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section" id="process">
     <div class="container">
-        <h2>FAQ</h2>
-        <div class="faq">
-            <p><strong>Это не карго?</strong><br>Нет. Все пошлины и НДС уплачиваются официально.</p>
-            <p><strong>Можно взять только часть услуг?</strong><br>Да. От инспекции до полной логистики.</p>
-            <p><strong>Какие документы я получаю?</strong><br>Инвойсы, декларации, подтверждение уплаты налогов.</p>
+      <div class="section__head">
+        <div>
+          <div class="kicker">Процесс</div>
+          <h2 class="h2">Пошагово: как идёт поставка</h2>
         </div>
-    </div>
-</section>
+      </div>
 
-<section class="section gray" id="contacts">
+      <div class="timeline">
+        <div class="step">
+          <div class="step__n">1</div>
+          <div class="step__c">
+            <h3>Запрос и расчёт</h3>
+            <p>Собираем вводные: товар, объём, срок, требования маркетплейса. Даём понятный план и стоимость по этапам.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step__n">2</div>
+          <div class="step__c">
+            <h3>Поставщик и оплата</h3>
+            <p>При необходимости — проверяем поставщика. Затем проводим оплату и контролируем отгрузку со стороны фабрики.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step__n">3</div>
+          <div class="step__c">
+            <h3>Склад, инспекция, подготовка</h3>
+            <p>Принимаем, проверяем, фото/видео, маркировка, переупаковка, комплекты, консолидация — как вам нужно.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step__n">4</div>
+          <div class="step__c">
+            <h3>Доставка и таможня</h3>
+            <p>Выбранный транспорт, контроль маршрута, таможенное оформление, пошлины и НДС. Комплект документов — на выходе.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step__n">5</div>
+          <div class="step__c">
+            <h3>«Честный знак» и финальная отгрузка</h3>
+            <p>Маркировка (если требуется), складские операции и доставка на FBO/FBS или по вашим адресам.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Lead -->
+  <section class="section section--cta" id="lead">
+    <div class="container cta">
+      <div class="cta__left">
+        <div class="kicker kicker--light">Заявка</div>
+        <h2 class="h2 h2--light">Получите расчёт под ваш товар</h2>
+        <p class="lead lead--light">
+          Напишите, что везёте, откуда и куда, ориентировочный объём и сроки. Мы предложим 2–3 варианта маршрута
+          (быстро/стандарт/эконом) и список необходимых документов.
+        </p>
+        <div class="cta__hint">Ответ обычно в течение рабочего дня.</div>
+      </div>
+
+      <form class="form" onsubmit="return false;">
+        <label class="field">
+          <span>Ваше имя</span>
+          <input type="text" name="name" placeholder="Иван" autocomplete="name" />
+        </label>
+
+        <label class="field">
+          <span>Телефон / WhatsApp</span>
+          <input type="tel" name="phone" placeholder="+7…" autocomplete="tel" />
+        </label>
+
+        <label class="field">
+          <span>Что везёте и откуда</span>
+          <input type="text" name="cargo" placeholder="Например: одежда, Гуанчжоу → Москва" />
+        </label>
+
+        <label class="field">
+          <span>Комментарий</span>
+          <textarea name="msg" rows="4" placeholder="Объём, срок, нужна ли маркировка, FBO/FBS…"></textarea>
+        </label>
+
+        <button class="btn btn--primary btn--block" type="submit" data-toast>
+          Отправить заявку
+        </button>
+
+        <p class="fine">
+          Нажимая «Отправить», вы соглашаетесь с обработкой персональных данных.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
     <div class="container">
-        <h2>Свяжитесь с нами</h2>
-        <form class="form">
-            <input type="text" placeholder="Имя" />
-            <input type="text" placeholder="Телефон / WhatsApp" />
-            <input type="text" placeholder="Ссылка на товар" />
-            <textarea placeholder="Комментарий"></textarea>
-            <button class="btn primary" type="submit">Отправить заявку</button>
-        </form>
-    </div>
-</section>
+      <div class="section__head">
+        <div>
+          <div class="kicker">FAQ</div>
+          <h2 class="h2">Ответы на частые вопросы</h2>
+        </div>
+      </div>
 
-<footer class="footer">
-    <div class="container">
-        <p>© Mail Courier. Все права защищены.</p>
-    </div>
-</footer>
+      <div class="accordion" data-accordion>
+        <details class="qa" open>
+          <summary>Это точно не карго?</summary>
+          <div class="qa__body">
+            Да. Мы строим поставки с таможенным оформлением, пошлинами и НДС. Вы получаете комплект документов под учёт.
+          </div>
+        </details>
 
+        <details class="qa">
+          <summary>Можно взять только часть услуг: например, инспекцию или маркировку?</summary>
+          <div class="qa__body">
+            Да. Можно точечно: проверка поставщика, склад/инспекция, консолидация, «Честный знак», таможня, доставка — как удобно.
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>Какие сроки доставки возможны?</summary>
+          <div class="qa__body">
+            Зависит от страны, транспорта и сезона. Обычно мы предлагаем 2–3 варианта: быстрее, стандарт и эконом — чтобы вы выбрали баланс.
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>Как я контролирую товар на складе?</summary>
+          <div class="qa__body">
+            Фото/видео отчёты по приёмке и инспекции, фиксация количества мест и статусов операций. Без “мы потом посмотрим”.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="brand brand--footer">
+          <span class="brand__mark"></span>
+          <span class="brand__name">Mail Courier</span>
+        </div>
+        <p class="fine fine--muted">
+          Международная логистика, ВЭД и сервисы для e-commerce.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__t">Разделы</div>
+        <a href="#services">Услуги</a>
+        <a href="#solutions">Решения</a>
+        <a href="#process">Процесс</a>
+        <a href="#lead">Заявка</a>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__t">Контакты</div>
+        <a href="tel:+78126704040">+7 (812) 670-40-40</a>
+        <a href="mailto:info@mail-courier.ru">info@mail-courier.ru</a>
+        <a href="#lead">Написать менеджеру</a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© <span id="y"></span> Mail Courier</span>
+      <span class="dot">•</span>
+      <a href="#top">Наверх</a>
+    </div>
+  </footer>
+
+  <div class="toast" data-toast-ui hidden>
+    <div class="toast__card">
+      <div class="toast__title">Заявка отправлена</div>
+      <div class="toast__text">Мы свяжемся с вами в ближайшее время.</div>
+      <button class="btn btn--sm btn--ghost" data-toast-close>Ок</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
