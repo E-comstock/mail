@@ -586,3 +586,93 @@ input:focus, textarea:focus{
   .footer__grid{ grid-template-columns: 1fr; }
   .strip__right{ grid-template-columns: 1fr; }
 }
+/* --- polish / visual upgrade --- */
+
+/* мягкий фон секций, чтобы сайт не был "плоским" */
+.section{
+  position: relative;
+}
+.section::before{
+  content:"";
+  position:absolute;
+  inset: 0;
+  pointer-events:none;
+  background: radial-gradient(800px 280px at 10% 0%, rgba(23,201,151,.08), transparent 55%);
+  opacity:.7;
+}
+
+/* карточки: глубина + ховер + чёткая сетка */
+.card{
+  transition: transform .12s ease, box-shadow .15s ease, border-color .15s ease, background .15s ease;
+  overflow: hidden;
+}
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 55px rgba(0,0,0,.10);
+  border-color: rgba(23,201,151,.28);
+  background: rgba(255,255,255,.92);
+}
+
+/* верх карточки: иконка + бейдж */
+.card__top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom: 10px;
+}
+
+.icon{
+  width: 38px;
+  height: 38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 14px;
+  background: rgba(23,201,151,.14);
+  border: 1px solid rgba(23,201,151,.32);
+  font-weight: 900;
+  color: rgba(8,40,31,.88);
+}
+
+.badge{
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(15,20,18,.12);
+  background: rgba(255,255,255,.75);
+  color: rgba(15,20,18,.72);
+}
+
+/* выделенная карточка (например "Импорт с НДС") */
+.card--featured{
+  border-color: rgba(23,201,151,.45);
+  background: linear-gradient(180deg, rgba(23,201,151,.10), rgba(255,255,255,.85));
+}
+.card--featured:hover{
+  border-color: rgba(23,201,151,.60);
+  box-shadow: 0 22px 65px rgba(23,201,151,.16), 0 18px 55px rgba(0,0,0,.10);
+}
+
+/* аккуратнее заголовки и отступы */
+.card h3{
+  font-size: 18px;
+}
+.card p{
+  font-size: 14.5px;
+}
+
+/* секция hero — чуть “богаче” */
+.hero{
+  border-bottom: 1px solid rgba(15,20,18,.06);
+}
+
+/* улучшение ссылок в навигации */
+.nav a{
+  font-weight: 650;
+}
+
+/* на мобилке уменьшим заголовки чуть аккуратнее */
+@media (max-width: 720px){
+  .hero h1{ letter-spacing: -0.03em; }
+}
