@@ -792,5 +792,38 @@ input:focus, textarea:focus{
   .import-vat__lead{
     max-width: none;
   }
+/* === FULL-BLEED ONLY for Import VAT === */
+.import-vat{
+  /* растягиваем фон на всю ширину окна, игнорируя .container */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 
+  /* чтобы не прилипал к краям */
+  padding: 0;
+}
+
+/* внутренний контейнер именно для этого блока */
+.import-vat__grid{
+  width: min(var(--max), calc(100% - 40px));
+  margin: 0 auto;
+
+  /* визуальный “корпус” секции */
+  padding: 32px;
+  border-radius: 36px;
+  border: 1px solid rgba(15,20,18,.10);
+  background:
+    radial-gradient(1200px 480px at 10% 5%, rgba(23,201,151,.16), transparent 60%),
+    radial-gradient(900px 360px at 90% 30%, rgba(14,168,117,.12), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.82));
+  box-shadow: 0 30px 90px rgba(0,0,0,.14);
+}
+
+/* на мобилке уменьшаем отступы */
+@media (max-width: 720px){
+  .import-vat__grid{
+    padding: 18px;
+    border-radius: 26px;
+  }
+  
 /* ===== Services picker ===== */
