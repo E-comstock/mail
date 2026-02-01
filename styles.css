@@ -678,67 +678,107 @@ input:focus, textarea:focus{
 }
 
 /* ===== Import VAT — wide product section ===== */
+/* ===== Import VAT: full-bleed wide section (only this block) ===== */
+
+/* Секция на всю ширину экрана */
 .import-vat{
-  margin-top: 32px;
-  padding: 32px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  padding: 34px 0;
+  background:
+    radial-gradient(1400px 520px at 12% 10%, rgba(23,201,151,.14), transparent 60%),
+    radial-gradient(1200px 460px at 90% 30%, rgba(14,168,117,.10), transparent 60%),
+    linear-gradient(180deg, #fbfdfc, #f7fbf9);
+  border-top: 1px solid rgba(15,20,18,.06);
+  border-bottom: 1px solid rgba(15,20,18,.06);
+}
+
+/* Внутренний “корпус” по ширине сайта */
+.import-vat__wrap{
+  width: min(var(--max), calc(100% - 40px));
+  margin: 0 auto;
+
   border-radius: 36px;
   border: 1px solid rgba(15,20,18,.10);
   background:
-    radial-gradient(1200px 480px at 10% 5%, rgba(23,201,151,.16), transparent 60%),
-    radial-gradient(900px 360px at 90% 30%, rgba(14,168,117,.12), transparent 60%),
-    linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.82));
-  box-shadow:
-    0 30px 90px rgba(0,0,0,.14),
-    inset 0 1px 0 rgba(255,255,255,.6);
+    linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.78));
+  box-shadow: 0 30px 90px rgba(0,0,0,.12);
+  padding: 26px;
 }
 
-/* сетка — делаем блок реально широким */
-.import-vat__grid{
-  display:grid;
-  grid-template-columns: 1.35fr 1fr;
-  gap: 28px;
-  align-items: stretch;
+/* Шапка секции */
+.import-vat__head{
+  margin-bottom: 18px;
 }
 
-/* левая колонка */
 .import-vat__title{
-  font-size: 34px;
-  letter-spacing: -0.025em;
-  margin: 6px 0 14px;
+  margin: 6px 0 10px;
+  font-size: clamp(26px, 3vw, 38px);
+  letter-spacing: -0.03em;
 }
 
 .import-vat__lead{
+  margin: 0;
+  max-width: 860px;
   font-size: 16.5px;
   line-height: 1.65;
   color: rgba(15,20,18,.80);
-  max-width: 620px;
+}
+
+/* Сетка контента */
+.import-vat__grid{
+  display:grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 18px;
+  align-items: stretch;
 }
 
 .import-vat__box{
-  margin-top: 18px;
-  padding: 18px 18px 14px;
   border-radius: 26px;
   border: 1px solid rgba(15,20,18,.10);
   background: rgba(255,255,255,.86);
+  padding: 18px 18px 12px;
 }
 
 .import-vat__boxTitle{
   font-weight: 900;
   letter-spacing: -0.01em;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-/* правая колонка — как продуктовая карточка */
+.import-vat__note{
+  margin-top: 14px;
+  border-radius: 26px;
+  border: 1px solid rgba(15,20,18,.10);
+  background: rgba(23,201,151,.06);
+  padding: 16px 18px;
+}
+
+.import-vat__noteTitle{
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+.import-vat__note p{
+  margin: 0;
+  color: rgba(15,20,18,.74);
+  line-height: 1.6;
+}
+
+/* Правая продуктовая карточка */
 .import-vat__card{
   height: 100%;
-  padding: 22px;
   border-radius: 32px;
-  border: 1px solid rgba(23,201,151,.32);
+  border: 1px solid rgba(23,201,151,.30);
   background:
     linear-gradient(180deg, rgba(23,201,151,.14), rgba(255,255,255,.94));
   box-shadow:
-    0 28px 80px rgba(23,201,151,.18),
-    inset 0 1px 0 rgba(255,255,255,.6);
+    0 28px 80px rgba(23,201,151,.14),
+    0 24px 70px rgba(0,0,0,.10);
+  padding: 18px;
   display:grid;
   gap: 14px;
 }
@@ -747,82 +787,53 @@ input:focus, textarea:focus{
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap: 12px;
+  flex-wrap:wrap;
 }
 
-/* преимущества — крупнее и “дороже” */
+.import-vat__pill{
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(23,201,151,.35);
+  background: rgba(23,201,151,.12);
+  font-weight: 900;
+  color: rgba(8,40,31,.92);
+}
+
+.import-vat__pillIcon{
+  width: 28px;
+  height: 28px;
+  border-radius: 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255,255,255,.70);
+  border: 1px solid rgba(23,201,151,.25);
+}
+
 .import-vat__points{
   display:grid;
-  gap: 14px;
+  gap: 12px;
 }
 
-.point{
-  padding: 14px 16px;
-  border-radius: 22px;
-  border: 1px solid rgba(15,20,18,.08);
-  background: rgba(255,255,255,.88);
+.import-vat__cta{
+  display:grid;
+  gap: 10px;
 }
 
-.point__t{
-  font-size: 14.5px;
-  font-weight: 900;
-  letter-spacing: -0.01em;
-}
-
-.point__p{
-  margin-top: 6px;
-  font-size: 14px;
-  line-height: 1.6;
-  color: rgba(15,20,18,.74);
-}
-
-/* кнопки — чуть больше акцента */
-.import-vat__card .btn{
-  padding: 14px 18px;
-  font-size: 14.5px;
-}
-
-/* адаптация */
-@media (max-width: 1100px){
-  .import-vat{
-    padding: 20px;
-  }
+/* Адаптация */
+@media (max-width: 980px){
   .import-vat__grid{
     grid-template-columns: 1fr;
   }
-  .import-vat__lead{
-    max-width: none;
+  .import-vat{
+    padding: 22px 0;
   }
-/* === FULL-BLEED ONLY for Import VAT === */
-.import-vat{
-  /* растягиваем фон на всю ширину окна, игнорируя .container */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-
-  /* чтобы не прилипал к краям */
-  padding: 0;
-}
-
-/* внутренний контейнер именно для этого блока */
-.import-vat__grid{
-  width: min(var(--max), calc(100% - 40px));
-  margin: 0 auto;
-
-  /* визуальный “корпус” секции */
-  padding: 32px;
-  border-radius: 36px;
-  border: 1px solid rgba(15,20,18,.10);
-  background:
-    radial-gradient(1200px 480px at 10% 5%, rgba(23,201,151,.16), transparent 60%),
-    radial-gradient(900px 360px at 90% 30%, rgba(14,168,117,.12), transparent 60%),
-    linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.82));
-  box-shadow: 0 30px 90px rgba(0,0,0,.14);
-}
-
-/* на мобилке уменьшаем отступы */
-@media (max-width: 720px){
-  .import-vat__grid{
-    padding: 18px;
+  .import-vat__wrap{
+    padding: 16px;
     border-radius: 26px;
   }
   
