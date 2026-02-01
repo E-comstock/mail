@@ -765,3 +765,116 @@ input:focus, textarea:focus{
   .import-vat__grid{ grid-template-columns: 1fr; }
   .import-vat{ padding: 14px; }
 }
+
+/* ===== Services picker ===== */
+
+.card--select { position: relative; }
+
+.pick{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(15,20,18,.10);
+  background: rgba(255,255,255,.85);
+  cursor: pointer;
+  user-select: none;
+}
+
+.pick__cb{ position:absolute; opacity:0; pointer-events:none; }
+.pick__ui{
+  width: 16px; height: 16px;
+  border-radius: 6px;
+  border: 1px solid rgba(15,20,18,.25);
+  background: rgba(255,255,255,.9);
+}
+.pick__text{
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(15,20,18,.72);
+}
+
+.card.is-picked{
+  border-color: rgba(23,201,151,.55) !important;
+  background: linear-gradient(180deg, rgba(23,201,151,.10), rgba(255,255,255,.92)) !important;
+  box-shadow: 0 22px 65px rgba(23,201,151,.12), 0 18px 55px rgba(0,0,0,.08) !important;
+}
+
+.card.is-picked .pick{
+  border-color: rgba(23,201,151,.45);
+  background: rgba(23,201,151,.10);
+}
+.card.is-picked .pick__ui{
+  background: rgba(23,201,151,.16);
+  border-color: rgba(23,201,151,.55);
+  box-shadow: 0 10px 22px rgba(23,201,151,.14);
+}
+.card.is-picked .pick__text{ color: rgba(8,40,31,.90); }
+
+/* Bundle bar */
+.bundle{
+  margin-top: 16px;
+  border-radius: 24px;
+  border: 1px solid rgba(15,20,18,.10);
+  background: rgba(255,255,255,.82);
+  box-shadow: 0 18px 60px rgba(0,0,0,.10);
+  padding: 12px 12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  position: sticky;
+  bottom: 14px;
+  z-index: 30;
+  backdrop-filter: blur(10px);
+}
+
+.bundle__title{
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+.bundle__chips{
+  display:flex;
+  gap: 8px;
+  flex-wrap:wrap;
+  margin-top: 8px;
+}
+
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(15,20,18,.10);
+  background: rgba(23,201,151,.08);
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(15,20,18,.78);
+}
+
+.chip button{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 900;
+  opacity: .7;
+}
+.chip button:hover{ opacity: 1; }
+
+.bundle__right{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  flex-wrap:wrap;
+}
+
+@media (max-width: 720px){
+  .bundle{ flex-direction: column; align-items: stretch; }
+  .bundle__right{ justify-content: flex-end; }
+}
