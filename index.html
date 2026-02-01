@@ -145,19 +145,25 @@
     </div>
 
     <div class="grid grid--3">
-      <article class="card">
-        <div class="card__top">
-          <div class="icon">✓</div>
-          <div class="badge">Проверка</div>
-        </div>
-        <h3>Проверка поставщиков</h3>
-        <p>Проверяем компанию/фабрику, документы и риски. Даём короткий отчёт, чтобы снизить вероятность проблем.</p>
-        <ul class="bullets">
-          <li>оценка рисков</li>
-          <li>проверка данных</li>
-          <li>отчёт по поставщику</li>
-        </ul>
-      </article>
+     <article class="card card--select" data-service="Проверка поставщиков">
+  <label class="pick">
+    <input class="pick__cb" type="checkbox" />
+    <span class="pick__ui"></span>
+    <span class="pick__text">Выбрать</span>
+  </label>
+
+  <div class="card__top">
+    <div class="icon">✓</div>
+    <div class="badge">Проверка</div>
+  </div>
+  <h3>Проверка поставщиков</h3>
+  <p>Проверяем компанию/фабрику, документы и риски. Даём короткий отчёт, чтобы снизить вероятность проблем.</p>
+  <ul class="bullets">
+    <li>оценка рисков</li>
+    <li>проверка данных</li>
+    <li>отчёт по поставщику</li>
+  </ul>
+</article>
 
       <article class="card">
         <div class="card__top">
@@ -270,7 +276,17 @@
           <li>доставка по адресам</li>
         </ul>
       </article>
-    </div>
+      <div class="bundle" id="bundle" data-bundle hidden>
+  <div class="bundle__left">
+    <div class="bundle__title">Вы выбрали: <span data-bundle-count>0</span></div>
+    <div class="bundle__chips" data-bundle-chips></div>
+  </div>
+  <div class="bundle__right">
+    <button class="btn btn--ghost btn--sm" type="button" data-bundle-clear>Сбросить</button>
+    <a class="btn btn--primary btn--sm" href="#lead" data-bundle-go><input type="hidden" name="services" data-services-field value="" />
+Отправить запрос</a>
+  </div>
+</div>
 
     <!-- IMPORT WITH VAT -->
     <div class="import-vat" id="import-vat">
