@@ -679,57 +679,60 @@ input:focus, textarea:focus{
 
 /* ===== Import VAT block ===== */
 .import-vat{
-  margin-top: 22px;
-  border-radius: 28px;
+  margin-top: 26px;
+  border-radius: 32px;
   border: 1px solid rgba(15,20,18,.10);
   background:
-    radial-gradient(900px 320px at 15% 10%, rgba(23,201,151,.12), transparent 60%),
-    linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.75));
-  box-shadow: 0 18px 60px rgba(0,0,0,.10);
-  padding: 18px;
+    radial-gradient(1100px 420px at 12% 10%, rgba(23,201,151,.14), transparent 62%),
+    radial-gradient(900px 360px at 88% 30%, rgba(14,168,117,.10), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.78));
+  box-shadow: 0 26px 85px rgba(0,0,0,.12);
+  padding: 26px;
 }
 
 .import-vat__grid{
   display:grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 14px;
-  align-items: start;
+  grid-template-columns: 1.25fr .95fr; /* правая колонка шире */
+  gap: 20px;
+  align-items: stretch;
 }
 
 .import-vat__title{
-  margin: 0 0 10px;
-  font-size: 26px;
+  margin: 0 0 12px;
+  font-size: 30px;
   letter-spacing: -0.02em;
 }
 
 .import-vat__lead{
-  margin: 0 0 14px;
+  margin: 0 0 16px;
   color: rgba(15,20,18,.78);
-  font-size: 15.5px;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .import-vat__box{
-  border-radius: 22px;
+  border-radius: 24px;
   border: 1px solid rgba(15,20,18,.10);
-  background: rgba(255,255,255,.78);
-  padding: 14px 14px 10px;
+  background: rgba(255,255,255,.82);
+  padding: 16px 16px 12px;
 }
 
 .import-vat__boxTitle{
   font-weight: 900;
   letter-spacing: -0.01em;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
+/* правая карточка — больше “продукт”, меньше “колонка” */
 .import-vat__card{
-  border-radius: 24px;
-  border: 1px solid rgba(23,201,151,.28);
+  border-radius: 28px;
+  border: 1px solid rgba(23,201,151,.30);
   background:
-    linear-gradient(180deg, rgba(23,201,151,.10), rgba(255,255,255,.86));
-  padding: 14px;
+    linear-gradient(180deg, rgba(23,201,151,.12), rgba(255,255,255,.90));
+  padding: 18px;
   display:grid;
-  gap: 10px;
-  box-shadow: 0 18px 55px rgba(23,201,151,.10);
+  gap: 12px;
+  box-shadow: 0 26px 85px rgba(23,201,151,.14);
 }
 
 .import-vat__cardTop{
@@ -738,32 +741,35 @@ input:focus, textarea:focus{
   justify-content:space-between;
 }
 
+/* преимущества — более “плитками” и крупнее */
 .import-vat__points{
   display:grid;
-  gap: 10px;
+  gap: 12px;
 }
 
 .point{
-  border-radius: 18px;
+  border-radius: 20px;
   border: 1px solid rgba(15,20,18,.08);
-  background: rgba(255,255,255,.78);
-  padding: 10px 12px;
+  background: rgba(255,255,255,.84);
+  padding: 12px 14px;
 }
 
 .point__t{
   font-weight: 900;
   letter-spacing: -0.01em;
+  font-size: 14px;
 }
 
 .point__p{
-  margin-top: 4px;
+  margin-top: 6px;
   color: rgba(15,20,18,.72);
   font-size: 13.5px;
+  line-height: 1.55;
 }
 
 @media (max-width: 980px){
+  .import-vat{ padding: 16px; }
   .import-vat__grid{ grid-template-columns: 1fr; }
-  .import-vat{ padding: 14px; }
 }
 
 /* ===== Services picker ===== */
